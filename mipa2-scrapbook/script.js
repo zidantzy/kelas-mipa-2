@@ -88,14 +88,29 @@ $$(".member-tab").forEach(button => button.addEventListener("click", () => {
   renderMembers(button.dataset.group);
 }));
 
-function applyGalleryFilter(year) {
-  $$(".filter-btn").forEach(btn=>btn.classList.toggle("active",btn.dataset.filter===year));
-  $$(".gallery-item").forEach(item=>{
-    item.hidden = !(year==="all" || item.dataset.year===year || item.dataset.year==="all");
+// ALL MOMENTS — tampilkan semua foto yang tersedia
+function showAllMoments() {
+  $$(".gallery-item").forEach(item => {
+    item.hidden = false;
+  });
+
+  $$(".filter-btn").forEach(button => {
+    button.classList.toggle(
+      "active",
+      button.dataset.filter === "all"
+    );
   });
 }
-$$(".filter-btn").forEach(button=>button.addEventListener("click",()=>applyGalleryFilter(button.dataset.filter)));
-$$("[data-year-link]").forEach(link=>link.addEventListener("click",()=>applyGalleryFilter(link.dataset.yearLink)));
+
+// Tombol ALL MOMENTS
+$$(".filter-btn").forEach(button => {
+  button.addEventListener("click", () => {
+    showAllMoments();
+  });
+});
+
+// Tampilkan semua foto saat halaman pertama dibuka
+showAllMoments();
 
 // Menu mobile: tutup setelah link dipilih dan saat Escape ditekan.
 const menuToggle = $(".menu-toggle");
