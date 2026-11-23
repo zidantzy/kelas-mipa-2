@@ -10,9 +10,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="preload" as="image" href="assets/images/hero.jpg" fetchpriority="high">
 </head>
-<body>
+<body class="cover-locked">
+  <section class="book-cover" id="bookCover" aria-label="Sampul buku kenangan">
+    <div class="cover-card">
+      <span class="cover-kicker">CLASS ARCHIVE · NO. 002</span>
+      <div class="cover-emblem" aria-hidden="true">✳</div>
+      <p class="cover-label">A LITTLE BOOK OF</p>
+      <h1>Our<br><em>Memories.</em></h1>
+      <p class="cover-class">CLASS MIPA 2 · 2022—2025</p>
+      <button class="open-book" id="openBook" type="button">BUKA BUKU <span>↗</span></button>
+      <span class="cover-foot">made with love, kept forever ♡</span>
+    </div>
+  </section>
   <div class="grain" aria-hidden="true"></div>
   <div class="announcement"><span>AN ARCHIVE OF US</span><span>EST. 2022 — 2025</span><span>MADE WITH ♡</span></div>
 
@@ -39,7 +49,7 @@
         <div class="hero-art">
           <div class="tape tape-one"></div>
           <div class="photo-frame hero-photo">
-            <img src="assets/images/hero.jpg" alt="Foto utama kelas CLASS MIPA 2" width="900" height="1100" loading="eager" fetchpriority="high" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/900x1100/d8c9b5/45382e?text=YOUR+CLASS+PHOTO'">
+            <img src="assets/images/hero.jpg" alt="Foto utama kelas CLASS MIPA 2" width="900" height="1100" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/900x1100/d8c9b5/45382e?text=YOUR+CLASS+PHOTO'">
             <span class="photo-caption">the people, the place, the memories.</span>
           </div>
           <div class="sticker sticker-star">✳</div>

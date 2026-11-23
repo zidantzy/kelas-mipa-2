@@ -42,6 +42,17 @@ const members = [
 const $ = (selector, parent=document) => parent.querySelector(selector);
 const $$ = (selector, parent=document) => [...parent.querySelectorAll(selector)];
 
+const cover = $("#bookCover");
+const openBook = $("#openBook");
+if (cover && openBook) {
+  openBook.addEventListener("click", () => {
+    cover.classList.add("is-opening");
+    document.body.classList.remove("cover-locked");
+    window.setTimeout(() => cover.remove(), 650);
+  });
+}
+
+
 const memberGrid = $("#memberGrid");
 const memberCount = $("#memberCount");
 
@@ -59,11 +70,11 @@ function renderMembers(group="all") {
   memberGrid.innerHTML = shown.map(member => {
     const index = members.indexOf(member);
     const number = String(index+1).padStart(2,"0");
-    const fallback = `https://placehold.co/500x550/e0d5c5/45382e?text=MEMBER+${number}`;
+    const fallback = `https://placehold.co/500x500/e0d5c5/45382e?text=MEMBER+${number}`;
     return `<article class="member-card" style="--tilt:${index%2?1.2:-1.2}deg">
       <span class="member-number">NO. ${number}</span>
-      <img src="${member.photo}" alt="Foto ${member.name}" width="500" height="550"
-        loading="lazy" decoding="async" data-fallback="${fallback}">
+      <img src="${member.photo}" alt="Foto ${member.name}" width="500" height="500"
+        loading="lazy" decoding="async" fetchpriority="low" data-fallback="${fallback}">
       <h4>${member.name}</h4><span>${member.group.toUpperCase()} · MIPA 2</span>
     </article>`;
   }).join("");
