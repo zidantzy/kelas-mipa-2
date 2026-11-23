@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="preload" as="image" href="assets/images/hero.jpg" fetchpriority="high">
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -38,7 +39,7 @@
         <div class="hero-art">
           <div class="tape tape-one"></div>
           <div class="photo-frame hero-photo">
-            <img src="assets/images/hero.jpg" alt="Foto utama kelas CLASS MIPA 2" onerror="this.src='https://placehold.co/900x1100/d8c9b5/45382e?text=YOUR+CLASS+PHOTO'">
+            <img src="assets/images/hero.jpg" alt="Foto utama kelas CLASS MIPA 2" width="900" height="1100" loading="eager" fetchpriority="high" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/900x1100/d8c9b5/45382e?text=YOUR+CLASS+PHOTO'">
             <span class="photo-caption">the people, the place, the memories.</span>
           </div>
           <div class="sticker sticker-star">✳</div>
@@ -52,10 +53,7 @@
     <section class="intro section-wrap paper-section" id="story">
       <div class="section-kicker"><span>01</span><span>THE BEGINNING</span><span class="kicker-line"></span><span>PAGE ONE</span></div>
       <div class="intro-grid">
-        <div>
-          <p class="eyebrow">DEAR, CLASS MIPA 2...</p>
-          <h2>Not just a class.<br><em>A whole little universe.</em></h2>
-        </div>
+        <div><p class="eyebrow">DEAR, CLASS MIPA 2...</p><h2>Not just a class.<br><em>A whole little universe.</em></h2></div>
         <div class="intro-copy">
           <p>Awalnya kita hanya sekumpulan orang yang dipertemukan di ruang kelas yang sama. Lalu hari-hari sederhana berubah jadi cerita: obrolan kecil, tugas yang menumpuk, tawa yang tiba-tiba pecah, dan momen yang ternyata ingin kita ulang lagi.</p>
           <p>Website ini adalah tempat untuk menyimpan semuanya. Bukan karena setiap hari selalu sempurna, tetapi karena setiap bagian dari perjalanan ini layak dikenang.</p>
@@ -70,30 +68,10 @@
       <div class="section-kicker"><span>02</span><span>THE YEARS WE SHARED</span><span class="kicker-line"></span><span>PAGE TWO</span></div>
       <div class="section-title-row"><div><p class="eyebrow">FOUR YEARS, COUNTLESS STORIES</p><h2>Our <em>timeline.</em></h2></div><p class="side-note">Different seasons.<br>Same familiar faces.</p></div>
       <div class="timeline-grid">
-        <article class="year-note">
-          <div class="year-number">01 <span>— FIRST PAGE</span></div>
-          <div class="year-photo tilt-left"><span class="tape"></span><img src="assets/images/2022/1.jpg" alt="Kenangan tahun 2022" onerror="this.src='https://placehold.co/700x850/d9cbb9/45382e?text=2022+PHOTO'"></div>
-          <h3>2022 <em>Where it began.</em></h3><p>Awal perjalanan, awal pertemuan, dan halaman pertama dari cerita kita.</p>
-          <a href="#gallery" class="small-link" data-year-link="2022">SEE THE MEMORIES ↗</a>
-        </article>
-        <article class="year-note">
-          <div class="year-number">02 <span>— THE NEXT PAGE</span></div>
-          <div class="year-photo tilt-left"><span class="tape"></span><img src="assets/images/2023/1.jpg" alt="Kenangan tahun 2023" onerror="this.src='https://placehold.co/700x850/d9cbb9/45382e?text=2023+PHOTO'"></div>
-          <h3>2023 <em>The beginning.</em></h3><p>Masih saling mengenal, masih canggung, dan mulai membangun cerita bersama.</p>
-          <a href="#gallery" class="small-link" data-year-link="2023">SEE THE MEMORIES ↗</a>
-        </article>
-        <article class="year-note year-middle">
-          <div class="year-number">03 <span>— IN BETWEEN</span></div>
-          <div class="year-photo tilt-right"><span class="tape"></span><img src="assets/images/2024/1.jpg" alt="Kenangan tahun 2024" onerror="this.src='https://placehold.co/700x850/c9b9a5/45382e?text=2024+PHOTO'"></div>
-          <h3>2024 <em>Growing together.</em></h3><p>Lebih banyak cerita, lebih banyak tawa, dan semakin banyak hal untuk dikenang.</p>
-          <a href="#gallery" class="small-link" data-year-link="2024">SEE THE MEMORIES ↗</a>
-        </article>
-        <article class="year-note">
-          <div class="year-number">04 <span>— LAST CHAPTER</span></div>
-          <div class="year-photo tilt-left"><span class="tape"></span><img src="assets/images/2025/1.jpg" alt="Kenangan tahun 2025" onerror="this.src='https://placehold.co/700x850/e0d5c5/45382e?text=2025+PHOTO'"></div>
-          <h3>2025 <em>Not the end.</em></h3><p>Satu bab mungkin selesai, tetapi cerita dan kenangannya akan selalu ikut bersama kita.</p>
-          <a href="#gallery" class="small-link" data-year-link="2025">SEE THE MEMORIES ↗</a>
-        </article>
+        <article class="year-note"><div class="year-number">01 <span>— FIRST PAGE</span></div><div class="year-photo tilt-left"><span class="tape"></span><img src="assets/images/2022/1.jpg" alt="Kenangan tahun 2022" width="700" height="850" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/700x850/d9cbb9/45382e?text=2022+PHOTO'"></div><h3>2022 <em>Where it began.</em></h3><p>Awal perjalanan, awal pertemuan, dan halaman pertama dari cerita kita.</p><a href="#gallery" class="small-link" data-year-link="2022">SEE THE MEMORIES ↗</a></article>
+        <article class="year-note"><div class="year-number">02 <span>— THE NEXT PAGE</span></div><div class="year-photo tilt-left"><span class="tape"></span><img src="assets/images/2023/1.jpg" alt="Kenangan tahun 2023" width="700" height="850" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/700x850/d9cbb9/45382e?text=2023+PHOTO'"></div><h3>2023 <em>The beginning.</em></h3><p>Masih saling mengenal, masih canggung, dan mulai membangun cerita bersama.</p><a href="#gallery" class="small-link" data-year-link="2023">SEE THE MEMORIES ↗</a></article>
+        <article class="year-note year-middle"><div class="year-number">03 <span>— IN BETWEEN</span></div><div class="year-photo tilt-right"><span class="tape"></span><img src="assets/images/2024/1.jpg" alt="Kenangan tahun 2024" width="700" height="850" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/700x850/c9b9a5/45382e?text=2024+PHOTO'"></div><h3>2024 <em>Growing together.</em></h3><p>Lebih banyak cerita, lebih banyak tawa, dan semakin banyak hal untuk dikenang.</p><a href="#gallery" class="small-link" data-year-link="2024">SEE THE MEMORIES ↗</a></article>
+        <article class="year-note"><div class="year-number">04 <span>— LAST CHAPTER</span></div><div class="year-photo tilt-left"><span class="tape"></span><img src="assets/images/2025/1.jpg" alt="Kenangan tahun 2025" width="700" height="850" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/700x850/e0d5c5/45382e?text=2025+PHOTO'"></div><h3>2025 <em>Not the end.</em></h3><p>Satu bab mungkin selesai, tetapi cerita dan kenangannya akan selalu ikut bersama kita.</p><a href="#gallery" class="small-link" data-year-link="2025">SEE THE MEMORIES ↗</a></article>
       </div>
     </section>
 
@@ -101,21 +79,17 @@
       <div class="section-kicker"><span>03</span><span>SNAPSHOTS & SOUVENIRS</span><span class="kicker-line"></span><span>PAGE THREE</span></div>
       <div class="section-title-row"><div><p class="eyebrow">LITTLE THINGS WE KEEP</p><h2>The photo <em>dump.</em></h2></div><p class="side-note">A few frames from<br>our favorite days.</p></div>
       <div class="filter-row" role="group" aria-label="Filter galeri">
-        <button class="filter-btn active" data-filter="all">ALL MOMENTS</button>
-        <button class="filter-btn" data-filter="2022">2022</button>
-        <button class="filter-btn" data-filter="2023">2023</button>
-        <button class="filter-btn" data-filter="2024">2024</button>
-        <button class="filter-btn" data-filter="2025">2025</button>
+        <button class="filter-btn active" data-filter="all">ALL MOMENTS</button><button class="filter-btn" data-filter="2022">2022</button><button class="filter-btn" data-filter="2023">2023</button><button class="filter-btn" data-filter="2024">2024</button><button class="filter-btn" data-filter="2025">2025</button>
       </div>
       <div class="gallery-grid" id="galleryGrid">
-        <button class="gallery-item" data-year="2022" data-caption="Where it began — 2022"><img src="assets/images/2022/1.jpg" alt="Momen 2022" onerror="this.src='https://placehold.co/650x650/d8c9b5/45382e?text=2022+MEMORY'"><span>WHERE IT BEGAN · 2022</span></button>
-        <button class="gallery-item wide" data-year="2023" data-caption="The beginning — 2023"><img src="assets/images/2023/1.jpg" alt="Momen 2023" onerror="this.src='https://placehold.co/900x650/d8c9b5/45382e?text=2023+MEMORY'"><span>THE BEGINNING · 2023</span></button>
-        <button class="gallery-item tall" data-year="2024" data-caption="Growing together — 2024"><img src="assets/images/2024/1.jpg" alt="Momen 2024" onerror="this.src='https://placehold.co/650x900/c9b9a5/45382e?text=2024+MEMORY'"><span>GROWING TOGETHER · 2024</span></button>
-        <button class="gallery-item" data-year="2025" data-caption="Last chapter — 2025"><img src="assets/images/2025/1.jpg" alt="Momen 2025" onerror="this.src='https://placehold.co/650x650/e0d5c5/45382e?text=2025+MEMORY'"><span>LAST CHAPTER · 2025</span></button>
-        <button class="gallery-item" data-year="all" data-caption="Little moments"><img src="assets/images/moments/1.jpg" alt="Momen kelas" onerror="this.src='https://placehold.co/650x650/d6c6b2/45382e?text=LITTLE+MOMENT'"><span>JUST ANOTHER DAY · ♡</span></button>
-        <button class="gallery-item wide" data-year="all" data-caption="The people who made it"><img src="assets/images/moments/2.jpg" alt="Teman sekelas" onerror="this.src='https://placehold.co/900x650/e5dccc/45382e?text=OUR+PEOPLE'"><span>OUR PEOPLE · ALWAYS</span></button>
-        <button class="gallery-item" data-year="all" data-caption="A memory to keep"><img src="assets/images/moments/3.jpg" alt="Kenangan bersama" onerror="this.src='https://placehold.co/650x650/cbbba7/45382e?text=MEMORY+NO.03'"><span>MEMORY NO. 03</span></button>
-        <button class="gallery-item" data-year="all" data-caption="One for the album"><img src="assets/images/moments/4.jpg" alt="Foto kenangan" onerror="this.src='https://placehold.co/650x650/d8c9b5/45382e?text=FOR+THE+ALBUM'"><span>FOR THE ALBUM</span></button>
+        <button class="gallery-item" data-year="2022" data-caption="Where it began — 2022"><img src="assets/images/2022/1.jpg" alt="Momen 2022" width="650" height="650" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/650x650/d8c9b5/45382e?text=2022+MEMORY'"><span>WHERE IT BEGAN · 2022</span></button>
+        <button class="gallery-item wide" data-year="2023" data-caption="The beginning — 2023"><img src="assets/images/2023/1.jpg" alt="Momen 2023" width="900" height="650" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/900x650/d8c9b5/45382e?text=2023+MEMORY'"><span>THE BEGINNING · 2023</span></button>
+        <button class="gallery-item tall" data-year="2024" data-caption="Growing together — 2024"><img src="assets/images/2024/1.jpg" alt="Momen 2024" width="650" height="900" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/650x900/c9b9a5/45382e?text=2024+MEMORY'"><span>GROWING TOGETHER · 2024</span></button>
+        <button class="gallery-item" data-year="2025" data-caption="Last chapter — 2025"><img src="assets/images/2025/1.jpg" alt="Momen 2025" width="650" height="650" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/650x650/e0d5c5/45382e?text=2025+MEMORY'"><span>LAST CHAPTER · 2025</span></button>
+        <button class="gallery-item" data-year="all" data-caption="Little moments"><img src="assets/images/moments/1.jpg" alt="Momen kelas" width="650" height="650" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/650x650/d6c6b2/45382e?text=LITTLE+MOMENT'"><span>JUST ANOTHER DAY · ♡</span></button>
+        <button class="gallery-item wide" data-year="all" data-caption="The people who made it"><img src="assets/images/moments/2.jpg" alt="Teman sekelas" width="900" height="650" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/900x650/e5dccc/45382e?text=OUR+PEOPLE'"><span>OUR PEOPLE · ALWAYS</span></button>
+        <button class="gallery-item" data-year="all" data-caption="A memory to keep"><img src="assets/images/moments/3.jpg" alt="Kenangan bersama" width="650" height="650" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/650x650/cbbba7/45382e?text=MEMORY+NO.03'"><span>MEMORY NO. 03</span></button>
+        <button class="gallery-item" data-year="all" data-caption="One for the album"><img src="assets/images/moments/4.jpg" alt="Foto kenangan" width="650" height="650" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/650x650/d8c9b5/45382e?text=FOR+THE+ALBUM'"><span>FOR THE ALBUM</span></button>
       </div>
       <p class="gallery-hint">✳ Klik foto untuk melihat lebih dekat</p>
     </section>
@@ -124,44 +98,35 @@
       <div class="section-kicker"><span>04</span><span>THE CAST OF OUR STORY</span><span class="kicker-line"></span><span>PAGE FOUR</span></div>
       <div class="section-title-row"><div><p class="eyebrow">34 PEOPLE, ONE CLASS</p><h2>Meet the <em>people.</em></h2></div><p class="side-note">Every person has a place<br>in this little archive.</p></div>
       <div class="people-intro">
-        <div class="people-photo"><img src="assets/images/members/class.jpg" alt="Foto seluruh anggota kelas CLASS MIPA 2" onerror="this.src='https://placehold.co/900x600/d8c9b5/45382e?text=CLASS+PHOTO'"></div>
+        <div class="people-photo"><img src="assets/images/members/class.jpg" alt="Foto seluruh anggota kelas CLASS MIPA 2" width="900" height="600" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/900x600/d8c9b5/45382e?text=CLASS+PHOTO'"></div>
         <div class="people-note"><span class="hand-note">the main characters ♡</span><h3>Our kind of<br><em>beautiful chaos.</em></h3><p>Kenalan lagi dengan orang-orang yang membuat perjalanan ini terasa berbeda.</p><span class="count-stamp">34<br><small>MEMBERS</small></span></div>
       </div>
       <div class="member-toolbar"><div class="member-tabs"><button class="member-tab active" data-group="all">ALL MEMBERS</button><button class="member-tab" data-group="boys">THE BOYS</button><button class="member-tab" data-group="girls">THE GIRLS</button></div><span class="member-count" id="memberCount">34 MEMBERS</span></div>
       <div class="member-grid" id="memberGrid"></div>
-      <p class="edit-hint"> <b></b>.</p>
+      <p class="edit-hint">A little place for everyone in our story. ♡</p>
     </section>
 
     <section class="duo-section section-wrap paper-section">
       <div class="section-kicker"><span>05</span><span>OUR LITTLE UNIVERSES</span><span class="kicker-line"></span><span>PAGE FIVE</span></div>
       <div class="section-title-row"><div><p class="eyebrow">TWO SIDES, ONE STORY</p><h2>Different vibes.<br><em>Same memories.</em></h2></div></div>
       <div class="duo-grid">
-        <article class="duo-card boys-card"><img src="assets/images/boys/1.jpg" alt="The Boys" onerror="this.src='https://placehold.co/900x700/c9b9a5/45382e?text=THE+BOYS'"><div class="duo-overlay"><span>THE LOUD ONES / 01</span><h3>The Boys<span>.</span></h3><p>Our own kind of chaos.</p></div><span class="duo-sticker">BOYS<br>CLUB</span></article>
-        <article class="duo-card girls-card"><img src="assets/images/girls/1.jpg" alt="The Girls" onerror="this.src='https://placehold.co/900x700/d8c9b5/45382e?text=THE+GIRLS'"><div class="duo-overlay"><span>THE LOVELY ONES / 02</span><h3>The Girls<span>.</span></h3><p>Little moments, big stories.</p></div><span class="duo-sticker">GIRLS<br>CLUB</span></article>
+        <article class="duo-card boys-card"><img src="assets/images/boys/1.jpg" alt="The Boys" width="900" height="700" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/900x700/c9b9a5/45382e?text=THE+BOYS'"><div class="duo-overlay"><span>THE LOUD ONES / 01</span><h3>The Boys<span>.</span></h3><p>Our own kind of chaos.</p></div><span class="duo-sticker">BOYS<br>CLUB</span></article>
+        <article class="duo-card girls-card"><img src="assets/images/girls/1.jpg" alt="The Girls" width="900" height="700" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/900x700/d8c9b5/45382e?text=THE+GIRLS'"><div class="duo-overlay"><span>THE LOVELY ONES / 02</span><h3>The Girls<span>.</span></h3><p>Little moments, big stories.</p></div><span class="duo-sticker">GIRLS<br>CLUB</span></article>
       </div>
     </section>
 
     <section class="final-section section-wrap" id="last-page">
-      <div class="final-inner">
-        <span class="final-top">THE LAST PAGE · BUT NOT THE END</span>
-        <p class="eyebrow">TO EVERYONE WHO WAS PART OF THIS</p>
-        <h2>Some chapters<br>close. <em>Memories don't.</em></h2>
-        <p class="final-copy">Terima kasih sudah menjadi bagian dari cerita ini. Sampai bertemu di cerita-cerita berikutnya, dengan versi diri kita yang terus tumbuh.</p>
-        <div class="signature">with love, <b>CLASS MIPA 2</b> ♡</div>
-        <a href="#top" class="back-top">BACK TO THE FIRST PAGE ↑</a>
-      </div>
+      <div class="final-inner"><span class="final-top">THE LAST PAGE · BUT NOT THE END</span><p class="eyebrow">TO EVERYONE WHO WAS PART OF THIS</p><h2>Some chapters<br>close. <em>Memories don't.</em></h2><p class="final-copy">Terima kasih sudah menjadi bagian dari cerita ini. Sampai bertemu di cerita-cerita berikutnya, dengan versi diri kita yang terus tumbuh.</p><div class="signature">with love, <b>CLASS MIPA 2</b> ♡</div><a href="#top" class="back-top">BACK TO THE FIRST PAGE ↑</a></div>
       <div class="final-doodle doodle-left">✳</div><div class="final-doodle doodle-right">♡</div>
     </section>
   </main>
 
   <footer><a class="footer-logo" href="#home">CLASS MIPA 2.</a><span>AN ARCHIVE OF US · 2022—2025</span><span>MADE WITH LOVE, KEPT FOREVER.</span></footer>
 
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button class="lightbox-close" aria-label="Tutup">×</button>
-    <button class="lightbox-prev" aria-label="Foto sebelumnya">←</button>
-    <figure><img src="" alt=""><figcaption></figcaption></figure>
-    <button class="lightbox-next" aria-label="Foto berikutnya">→</button>
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Pratinjau foto">
+    <button class="lightbox-close" aria-label="Tutup">×</button><button class="lightbox-prev" aria-label="Foto sebelumnya">←</button>
+    <figure><img src="" alt=""><figcaption></figcaption></figure><button class="lightbox-next" aria-label="Foto berikutnya">→</button>
   </div>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
